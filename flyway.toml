@@ -1,0 +1,21 @@
+databaseType = "Snowflake"
+id = "4c43e595-7e88-4811-b089-438c4c02e566"
+name = "New Project"
+
+[flyway]
+locations = [ "filesystem:migrations" ]
+mixed = true
+outOfOrder = true
+schemaModelLocation = "schema-model"
+validateMigrationNaming = true
+
+  [flyway.check]
+  majorTolerance = 0
+
+[flywayDesktop]
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+enableMigrations = false
+
+[redgateCompare]
+filterFile = "filter.rgf"
